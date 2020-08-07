@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">EnglishForHotelManagement</string>
+
+    <string name="slider_title1">Unlimited Hotel English\nLearning Lessons</string>
+    <string name="slider_subtitle1">Learn every single day</string>
+
+    <string name="slider_title2">Learn Daily Essential\nHotel Conversation</string>
+    <string name="slider_subtitle2">Be confident english speaker</string>
+
+    <string name="slider_title3">Daily Easy Video\nLessson Learning</string>
+    <string name="slider_subtitle3">Learn by video watching</string>
+
 </resources>
