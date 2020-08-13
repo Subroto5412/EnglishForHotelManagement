@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -11,7 +12,8 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -21,9 +23,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
+    implementation "com.android.support:multidex:1.0.3"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.1'
@@ -32,12 +43,40 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    implementation "androidx.annotation:annotation:$rootProject.annotationVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerviewVersion"
+    implementation "androidx.recyclerview:recyclerview-selection:$rootProject.recyclerviewSelectionVersion"
+    implementation "androidx.cardview:cardview:$rootProject.cardviewVersion"
+    implementation "androidx.vectordrawable:vectordrawable:$rootProject.vectordrawableVersion"
+    implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.vectordrawableVersion"
 
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation "me.relex:circleindicator:2.1.4"
 
+    //VM
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+
+    // dependency injection
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt("com.google.dagger:dagger-compiler:$rootProject.dagger2Version")
+    kapt("com.google.dagger:dagger-android-processor:$rootProject.dagger2Version")
+
+    // font
+    implementation "io.github.inflationx:calligraphy3:$rootProject.calligraphyVersion"
+
+    // logger
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
     // support for different screen sizes
-    implementation "com.intuit.sdp:sdp-android:1.0.6"
-    implementation "com.intuit.ssp:ssp-android:1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$rootProject.sdpAndroidVersion"
+    implementation "com.intuit.ssp:ssp-android:$rootProject.sdpAndroidVersion"
+
 
 }

@@ -1,4 +1,4 @@
-package com.subroto.english.hotelmanagement
+package com.subroto.english.hotelmanagement.ui.main.slider
 
 import android.annotation.SuppressLint
 import android.os.Bundle
