@@ -8,6 +8,7 @@ import androidx.databinding.library.baseAdapters.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.SplashBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
+import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import com.subroto.english.hotelmanagement.ui.main.slider.MainActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -34,7 +35,6 @@ class SplashActivity : BaseActivity<SplashBinding, SplashViewModel>(), ISplashNa
         get() = R.layout.splash
 
     override fun openMainActivity() {
-        // val intent = MainActivity.newIntent(this@SplashActivity)
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
@@ -45,15 +45,10 @@ class SplashActivity : BaseActivity<SplashBinding, SplashViewModel>(), ISplashNa
         viewModel.navigator = this
 
         Handler().postDelayed(
-            Runnable
-            // Using handler with postDelayed called runnable run method
             {
                 mSplashViewModel.startSeeding();
-
-                // close this activity
                 finish()
-            }, 3 * 1000
-        ) // wait for 3 seconds
+            }, 3 * 1000)
 //        viewModel.startSeeding() // After Login
     }
 
@@ -62,10 +57,8 @@ class SplashActivity : BaseActivity<SplashBinding, SplashViewModel>(), ISplashNa
     }
 
     companion object {
-
         fun newIntent(context: Context): Intent {
             return Intent(context, SplashActivity::class.java)
         }
     }
-
 }

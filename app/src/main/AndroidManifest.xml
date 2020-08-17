@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name=".ui.main.slider.MainActivity"></activity>
+        <activity android:name=".ui.main.home.HomeActivity"></activity>
     </application>
 
 </manifest>

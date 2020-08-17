@@ -1,11 +1,14 @@
 package com.subroto.english.hotelmanagement.ui.main.slider
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.Window
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.subroto.english.hotelmanagement.R
+import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import me.relex.circleindicator.CircleIndicator3
 
@@ -33,6 +36,14 @@ class MainActivity : AppCompatActivity() {
         view_pager2.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         val indicator: CircleIndicator3 = findViewById<CircleIndicator3>(R.id.indicator)
         indicator.setViewPager(view_pager2)
+        val btn_click_me = findViewById(R.id.continue_btn) as Button
+
+        btn_click_me.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     private fun addToListModel(title: String, subtTitle: String, image: Int) {
