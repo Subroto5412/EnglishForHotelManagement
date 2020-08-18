@@ -20,6 +20,9 @@
 
         <activity android:name=".ui.main.slider.MainActivity"></activity>
         <activity android:name=".ui.main.home.HomeActivity"></activity>
+        <activity android:name=".ui.main.vocabulary.VocabularyActivity"></activity>
+        <activity android:name=".ui.main.sentence.SentenceActivity"></activity>
+        <activity android:name=".ui.main.conversation.ConversationActivity"></activity>
     </application>
 
 </manifest>

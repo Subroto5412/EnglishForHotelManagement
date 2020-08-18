@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110sdp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/geetings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/geeting_bg"
+                app:layout_constraintBottom_toTopOf="@+id/reception"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/geeting_icon_im"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:src="@drawable/geeting_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Geetings"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/geeting_icon_im"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/reception"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/reception_bg"
+                app:layout_constraintBottom_toTopOf="@+id/service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/geetings">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/reception_icon_im"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:src="@drawable/reception_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Receptions"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/reception_icon_im"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/service_bg"
+                app:layout_constraintBottom_toTopOf="@+id/kitchen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reception">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/service_icon_im"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:src="@drawable/service_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Services"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/service_icon_im"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/kitchen"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/kitchen_bg"
+                app:layout_constraintBottom_toTopOf="@+id/foods"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/service">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/kitchen_icon_im"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:src="@drawable/kitchen_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Kitchen"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/kitchen_icon_im"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/foods"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/food_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kitchen">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/foods_icon_im"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_41sdp"
+                    android:layout_marginLeft="@dimen/_18sdp"
+                    android:src="@drawable/food_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Foods"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_20ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/foods_icon_im"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

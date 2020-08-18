@@ -6,4 +6,15 @@ import javax.inject.Inject
 
 class HomeViewModel  @Inject constructor(dataManager: IDataManager) : BaseViewModel<IHomeNavigator>(dataManager){
 
+    fun startVocabulary() {
+        navigator!!.openVocabularyActivity()
+    }
+
+    fun startSentence() {
+        navigator!!.openSentenceActivity()
+    }
+
+    fun startConversation() {
+        navigator!!.openConversationActivity()
+    }
 }

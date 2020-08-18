@@ -5,6 +5,9 @@
     tools:context="com.subroto.english.hotelmanagement.ui.main.home.HomeActivity">
 
     <data>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.subroto.english.hotelmanagement.ui.main.home.HomeViewModel" />
@@ -122,11 +125,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:background="@drawable/vocabulary"
+                    android:onClick="@{() -> viewModel.startVocabulary()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/sentence_btn"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/sentence_btn"
@@ -135,12 +138,12 @@
                     android:layout_marginLeft="@dimen/_12sdp"
                     android:layout_marginRight="@dimen/_20sdp"
                     android:background="@drawable/sentence"
+                    android:onClick="@{() -> viewModel.startSentence()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.77"
                     app:layout_constraintStart_toEndOf="@+id/vocabulary_btn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -157,11 +160,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:background="@drawable/conversation"
+                    android:onClick="@{() -> viewModel.startConversation()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/interview_btn"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatImageButton
                     android:id="@+id/interview_btn"

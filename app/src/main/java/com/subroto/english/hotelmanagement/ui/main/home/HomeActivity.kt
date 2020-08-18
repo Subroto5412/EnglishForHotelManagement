@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.library.baseAdapters.BR
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.HomeBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -44,5 +46,21 @@ class HomeActivity  : BaseActivity<HomeBinding, HomeViewModel>(), IHomeNavigator
         fun newIntent(context: Context): Intent {
             return Intent(context, HomeActivity::class.java)
         }
+    }
+    override fun openVocabularyActivity() {
+        val intent = Intent(this, VocabularyActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openSentenceActivity() {
+        val intent = Intent(this, SentenceActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    override fun openConversationActivity() {
+        val intent = Intent(this, ConversationActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
