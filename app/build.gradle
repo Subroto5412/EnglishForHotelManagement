@@ -55,6 +55,10 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation "me.relex:circleindicator:2.1.4"
 
+    // reactive
+//    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+//    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+
     //ViewModel
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
 

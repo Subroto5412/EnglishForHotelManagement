@@ -10,6 +10,9 @@ import com.subroto.english.hotelmanagement.ui.main.splash.SplashActivity
 import com.subroto.english.hotelmanagement.ui.main.splash.SplashActivityModule
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivityModule
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivityModule
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingAdapterModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -19,7 +22,9 @@ import dagger.android.ContributesAndroidInjector
         HomeActivityModule::class,
         VocabularyActivityModule::class,
         SentenceActivityModule::class,
-        ConversationActivityModule::class]
+        ConversationActivityModule::class,
+        GeetingActivityModule::class
+    ]
 )
 
 abstract class ActivityBuilder {
@@ -48,4 +53,9 @@ abstract class ActivityBuilder {
         modules = [ConversationActivityModule::class]
     )
     internal abstract fun bindConversationActivity(): ConversationActivity
+
+    @ContributesAndroidInjector(
+        modules = [GeetingActivityModule::class, GeetingAdapterModule::class]
+    )
+    internal abstract fun bindGeetingActivity(): GeetingActivity
 }

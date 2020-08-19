@@ -8,5 +8,9 @@ import javax.inject.Inject
 
 class VocabularyViewModel  @Inject constructor(dataManager: IDataManager) : BaseViewModel<IVocabularyNavigator>(dataManager){
 
+    fun startGeetings() {
+        navigator!!.openGeetingsActivity()
+    }
+
 
 }

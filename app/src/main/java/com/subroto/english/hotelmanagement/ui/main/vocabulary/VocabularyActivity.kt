@@ -5,17 +5,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.databinding.library.baseAdapters.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.VocabularyBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class VocabularyActivity  : BaseActivity<VocabularyBinding, VocabularyViewModel>(), IVocabularyNavigator,
+class VocabularyActivity : BaseActivity<VocabularyBinding, VocabularyViewModel>(), IVocabularyNavigator,
     HasAndroidInjector {
 
     override val viewModel: VocabularyViewModel
@@ -38,6 +40,9 @@ class VocabularyActivity  : BaseActivity<VocabularyBinding, VocabularyViewModel>
         viewModel.navigator = this
 
         val backBtn = findViewById<EditText>(R.id.backbtn) as Button
+        val titileName = findViewById<EditText>(R.id.title_name_tv) as TextView
+        titileName.text = "Vocabulary"
+
         backBtn.setOnClickListener() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
@@ -45,6 +50,11 @@ class VocabularyActivity  : BaseActivity<VocabularyBinding, VocabularyViewModel>
         }
     }
 
+    override fun openGeetingsActivity() {
+        var intent = Intent(this, GeetingActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
     override fun androidInjector(): AndroidInjector<Any>? {
         return fragmentDispatchingAndroidInjector
     }

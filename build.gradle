@@ -47,6 +47,9 @@ ext {
     //DI
     dagger2Version = '2.24'
 
+    rxjava2Version = '2.2.13'
+    rxAndroidVersion = '2.1.1'
+
     placeholderviewVersion = '0.6.1'
     debugDBVersion = '1.0.3'
 

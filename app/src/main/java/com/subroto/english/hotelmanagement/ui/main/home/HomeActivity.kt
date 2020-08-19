@@ -10,6 +10,7 @@ import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector

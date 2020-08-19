@@ -23,6 +23,7 @@
         <activity android:name=".ui.main.vocabulary.VocabularyActivity"></activity>
         <activity android:name=".ui.main.sentence.SentenceActivity"></activity>
         <activity android:name=".ui.main.conversation.ConversationActivity"></activity>
+        <activity android:name=".ui.main.vocabulary.geeting.GeetingActivity"></activity>
     </application>
 
 </manifest>

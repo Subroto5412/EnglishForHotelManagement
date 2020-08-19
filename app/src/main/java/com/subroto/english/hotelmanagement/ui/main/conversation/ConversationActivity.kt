@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.databinding.library.baseAdapters.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.ConversationBinding
@@ -43,6 +44,9 @@ class ConversationActivity : BaseActivity<ConversationBinding, ConversationViewM
         viewModel.navigator = this
 
         val backBtn = findViewById<EditText>(R.id.backbtn) as Button
+        val titileName = findViewById<EditText>(R.id.title_name_tv) as TextView
+        titileName.text = "Conversation"
+
         backBtn.setOnClickListener() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
