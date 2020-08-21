@@ -11,7 +11,11 @@ import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.VocabularyBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.foods.VocabularyFoodsActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.kitchen.VocabularyKitchenActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.reception.VocabularyReceptionActivity
+import com.subroto.english.hotelmanagement.ui.main.vocabulary.service.VocabularyServiceActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -55,6 +59,31 @@ class VocabularyActivity : BaseActivity<VocabularyBinding, VocabularyViewModel>(
         startActivity(intent)
         finish()
     }
+
+    override fun openFoodsActivity() {
+        var intent = Intent(this, VocabularyServiceActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openServiceActivity() {
+        var intent = Intent(this, VocabularyServiceActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openReceptionActivity() {
+        var intent = Intent(this, VocabularyReceptionActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openKitchenActivity() {
+        var intent = Intent(this, VocabularyKitchenActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
     override fun androidInjector(): AndroidInjector<Any>? {
         return fragmentDispatchingAndroidInjector
     }

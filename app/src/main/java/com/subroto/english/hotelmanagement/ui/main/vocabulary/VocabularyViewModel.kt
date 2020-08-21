@@ -12,5 +12,16 @@ class VocabularyViewModel  @Inject constructor(dataManager: IDataManager) : Base
         navigator!!.openGeetingsActivity()
     }
 
-
+    fun startFoods() {
+        navigator!!.openFoodsActivity()
+    }
+    fun startService() {
+        navigator!!.openFoodsActivity()
+    }
+    fun startReception() {
+        navigator!!.openReceptionActivity()
+    }
+    fun startKitchen() {
+        navigator!!.openKitchenActivity()
+    }
 }

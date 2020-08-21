@@ -18,12 +18,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.main.slider.MainActivity"></activity>
-        <activity android:name=".ui.main.home.HomeActivity"></activity>
-        <activity android:name=".ui.main.vocabulary.VocabularyActivity"></activity>
-        <activity android:name=".ui.main.sentence.SentenceActivity"></activity>
-        <activity android:name=".ui.main.conversation.ConversationActivity"></activity>
-        <activity android:name=".ui.main.vocabulary.geeting.GeetingActivity"></activity>
+        <activity android:name=".ui.main.slider.MainActivity"/>
+        <activity android:name=".ui.main.home.HomeActivity"/>
+        <activity android:name=".ui.main.vocabulary.VocabularyActivity"/>
+        <activity android:name=".ui.main.sentence.SentenceActivity"/>
+        <activity android:name=".ui.main.conversation.ConversationActivity"/>
+        <activity android:name=".ui.main.vocabulary.geeting.GeetingActivity"/>
+        <activity android:name=".ui.main.vocabulary.foods.VocabularyFoodsActivity"/>
+        <activity android:name=".ui.main.vocabulary.service.VocabularyServiceActivity"/>
+        <activity android:name=".ui.main.vocabulary.reception.VocabularyReceptionActivity"/>
+        <activity android:name=".ui.main.vocabulary.kitchen.VocabularyKitchenActivity"/>
     </application>
 
 </manifest>
