@@ -28,6 +28,11 @@
         <activity android:name=".ui.main.vocabulary.service.VocabularyServiceActivity"/>
         <activity android:name=".ui.main.vocabulary.reception.VocabularyReceptionActivity"/>
         <activity android:name=".ui.main.vocabulary.kitchen.VocabularyKitchenActivity"/>
+        <activity android:name=".ui.main.conversation.reception.ConversationReceptionActivity"/>
+        <activity android:name=".ui.main.conversation.service.ConversationServiceActivity"/>
+        <activity android:name=".ui.main.conversation.foods.ConversationFoodsActivity"/>
+        <activity android:name=".ui.main.conversation.geetings.ConversationGeetingsActivity"/>
+        <activity android:name=".ui.main.conversation.kitchen.ConversationKitchenActivity"/>
     </application>
 
 </manifest>

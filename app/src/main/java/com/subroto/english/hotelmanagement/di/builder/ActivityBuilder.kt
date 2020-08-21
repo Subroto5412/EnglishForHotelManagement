@@ -2,6 +2,21 @@ package com.subroto.english.hotelmanagement.di.builder
 
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.foods.ConversationFoodsActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.foods.ConversationFoodsActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.foods.ConversationFoodsAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.geetings.ConversationGeetingsActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.geetings.ConversationGeetingsActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.geetings.ConversationGeetingsAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.kitchen.ConversationKitchenActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.kitchen.ConversationKitchenActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.kitchen.ConversationKitchenAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.reception.ConversationReceptionActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.reception.ConversationReceptionActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.reception.ConversationReceptionAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.service.ConversationServiceActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.service.ConversationServiceActivityModule
+import com.subroto.english.hotelmanagement.ui.main.conversation.service.ConversationServiceAdapterModule
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
@@ -39,7 +54,12 @@ import dagger.android.ContributesAndroidInjector
         VocabularyFoodsActivityModule::class,
         VocabularyServiceActivityModule::class,
         VocabularyReceptionActivityModule::class,
-        VocabularyKitchenActivityModule::class
+        VocabularyKitchenActivityModule::class,
+        ConversationGeetingsActivityModule::class,
+        ConversationFoodsActivityModule::class,
+        ConversationServiceActivityModule::class,
+        ConversationReceptionActivityModule::class,
+        ConversationKitchenActivityModule::class
     ]
 )
 
@@ -94,4 +114,31 @@ abstract class ActivityBuilder {
         modules = [VocabularyKitchenActivityModule::class, VocabularyKitchenAdapterModule::class]
     )
     internal abstract fun bindVocabularyKitchenActivity(): VocabularyKitchenActivity
+
+    @ContributesAndroidInjector(
+        modules = [ConversationGeetingsActivityModule::class, ConversationGeetingsAdapterModule::class]
+    )
+    internal abstract fun bindConversationGeetingsActivity(): ConversationGeetingsActivity
+
+    @ContributesAndroidInjector(
+        modules = [ConversationFoodsActivityModule::class, ConversationFoodsAdapterModule::class]
+    )
+    internal abstract fun bindConversationFoodsActivity(): ConversationFoodsActivity
+
+    @ContributesAndroidInjector(
+        modules = [ConversationServiceActivityModule::class, ConversationServiceAdapterModule::class]
+    )
+    internal abstract fun bindConversationServiceActivity(): ConversationServiceActivity
+
+    @ContributesAndroidInjector(
+        modules = [ConversationReceptionActivityModule::class, ConversationReceptionAdapterModule::class]
+    )
+    internal abstract fun bindConversationReceptionActivity(): ConversationReceptionActivity
+
+    @ContributesAndroidInjector(
+        modules = [ConversationKitchenActivityModule::class, ConversationKitchenAdapterModule::class]
+    )
+    internal abstract fun bindConversationKitchenActivity(): ConversationKitchenActivity
+
+
 }

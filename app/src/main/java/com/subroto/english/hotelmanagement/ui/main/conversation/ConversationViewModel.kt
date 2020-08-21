@@ -7,5 +7,20 @@ import javax.inject.Inject
 
 class ConversationViewModel  @Inject constructor(dataManager: IDataManager) : BaseViewModel<IConversationNavigator>(dataManager){
 
+    fun startGeetings() {
+        navigator!!.openGeetingsActivity()
+    }
 
+    fun startFoods() {
+        navigator!!.openFoodsActivity()
+    }
+    fun startService() {
+        navigator!!.openServiceActivity()
+    }
+    fun startReception() {
+        navigator!!.openReceptionActivity()
+    }
+    fun startKitchen() {
+        navigator!!.openKitchenActivity()
+    }
 }
