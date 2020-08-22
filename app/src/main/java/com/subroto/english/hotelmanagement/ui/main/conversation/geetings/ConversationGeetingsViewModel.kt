@@ -41,6 +41,4 @@ class ConversationGeetingsViewModel @Inject constructor(
         GeetingsObservableArrayList.clear()
         GeetingsObservableArrayList.addAll(Geetings)
     }
-
-
 }

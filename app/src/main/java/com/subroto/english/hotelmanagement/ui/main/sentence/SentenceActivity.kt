@@ -10,7 +10,17 @@ import androidx.databinding.library.baseAdapters.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.SentenceBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.foods.ConversationFoodsActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.geetings.ConversationGeetingsActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.kitchen.ConversationKitchenActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.reception.ConversationReceptionActivity
+import com.subroto.english.hotelmanagement.ui.main.conversation.service.ConversationServiceActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.geetings.SentenceGeetingsActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.kitchen.SentenceKitchenActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.reception.SentenceReceptionActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.service.SentenceServiceActivity
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -50,6 +60,35 @@ class SentenceActivity : BaseActivity<SentenceBinding, SentenceViewModel>(),
         }
     }
 
+    override fun openGeetingsActivity() {
+        var intent = Intent(this, SentenceGeetingsActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openFoodsActivity() {
+        var intent = Intent(this, SentenceFoodsActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openServiceActivity() {
+        var intent = Intent(this, SentenceServiceActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openReceptionActivity() {
+        var intent = Intent(this, SentenceReceptionActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openKitchenActivity() {
+        var intent = Intent(this, SentenceKitchenActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
     override fun androidInjector(): AndroidInjector<Any>? {
         return fragmentDispatchingAndroidInjector
     }

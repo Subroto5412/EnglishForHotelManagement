@@ -21,6 +21,21 @@ import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.geetings.SentenceGeetingsActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.geetings.SentenceGeetingsActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.geetings.SentenceGeetingsAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.kitchen.SentenceKitchenActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.kitchen.SentenceKitchenActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.kitchen.SentenceKitchenAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.reception.SentenceReceptionActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.reception.SentenceReceptionActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.reception.SentenceReceptionAdapterModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.service.SentenceServiceActivity
+import com.subroto.english.hotelmanagement.ui.main.sentence.service.SentenceServiceActivityModule
+import com.subroto.english.hotelmanagement.ui.main.sentence.service.SentenceServiceAdapterModule
 import com.subroto.english.hotelmanagement.ui.main.splash.SplashActivity
 import com.subroto.english.hotelmanagement.ui.main.splash.SplashActivityModule
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
@@ -59,7 +74,12 @@ import dagger.android.ContributesAndroidInjector
         ConversationFoodsActivityModule::class,
         ConversationServiceActivityModule::class,
         ConversationReceptionActivityModule::class,
-        ConversationKitchenActivityModule::class
+        ConversationKitchenActivityModule::class,
+        SentenceGeetingsActivityModule::class,
+        SentenceFoodsActivityModule::class,
+        SentenceServiceActivityModule::class,
+        SentenceReceptionActivityModule::class,
+        SentenceKitchenActivityModule::class
     ]
 )
 
@@ -139,6 +159,31 @@ abstract class ActivityBuilder {
         modules = [ConversationKitchenActivityModule::class, ConversationKitchenAdapterModule::class]
     )
     internal abstract fun bindConversationKitchenActivity(): ConversationKitchenActivity
+
+    @ContributesAndroidInjector(
+        modules = [SentenceGeetingsActivityModule::class, SentenceGeetingsAdapterModule::class]
+    )
+    internal abstract fun bindSentenceGeetingsActivity(): SentenceGeetingsActivity
+
+    @ContributesAndroidInjector(
+        modules = [SentenceFoodsActivityModule::class, SentenceFoodsAdapterModule::class]
+    )
+    internal abstract fun bindSentenceFoodsActivity(): SentenceFoodsActivity
+
+    @ContributesAndroidInjector(
+        modules = [SentenceServiceActivityModule::class, SentenceServiceAdapterModule::class]
+    )
+    internal abstract fun bindSentenceServiceActivity(): SentenceServiceActivity
+
+    @ContributesAndroidInjector(
+        modules = [SentenceReceptionActivityModule::class, SentenceReceptionAdapterModule::class]
+    )
+    internal abstract fun bindSentenceReceptionActivity(): SentenceReceptionActivity
+
+    @ContributesAndroidInjector(
+        modules = [SentenceKitchenActivityModule::class, SentenceKitchenAdapterModule::class]
+    )
+    internal abstract fun bindSentenceKitchenActivity(): SentenceKitchenActivity
 
 
 }

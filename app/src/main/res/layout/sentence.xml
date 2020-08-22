@@ -46,7 +46,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/reception"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="@{() -> viewModel.startGeetings()}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/geeting_icon_im"
@@ -82,7 +83,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/service"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/geetings">
+                app:layout_constraintTop_toBottomOf="@+id/geetings"
+                android:onClick="@{() -> viewModel.startReception()}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/reception_icon_im"
@@ -119,7 +121,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/kitchen"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/reception">
+                app:layout_constraintTop_toBottomOf="@+id/reception"
+                android:onClick="@{() -> viewModel.startService()}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/service_icon_im"
@@ -156,7 +159,8 @@
                 app:layout_constraintBottom_toTopOf="@+id/foods"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/service">
+                app:layout_constraintTop_toBottomOf="@+id/service"
+                android:onClick="@{() -> viewModel.startKitchen()}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/kitchen_icon_im"
@@ -194,7 +198,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kitchen">
+                app:layout_constraintTop_toBottomOf="@+id/kitchen"
+                android:onClick="@{() -> viewModel.startFoods()}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/foods_icon_im"

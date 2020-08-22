@@ -41,6 +41,4 @@ class ConversationFoodsViewModel @Inject constructor(
         foodsObservableArrayList.clear()
         foodsObservableArrayList.addAll(foods)
     }
-
-
 }
