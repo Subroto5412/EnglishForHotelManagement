@@ -30,8 +30,6 @@ class AboutQuizDialog : BaseActivity<DialogAboutQuizBinding, AboutQuizDialogView
         val closeBtn = findViewById<Button>(R.id.dialog_close_button)
 
         closeBtn.setOnClickListener() {
-            val  intent = Intent(this, QuizActivity::class.java)
-            startActivity(intent)
             finish()
         }
 
