@@ -8,5 +8,10 @@
     <string name="slider_title3">Daily Easy Video\nLessson Learning</string>
     <string name="slider_subtitle3">Learn by video watching</string>
     <string name="continue_btn">Continue</string>
+    <string name="text2">Each answer  carries 10 Marks</string>
+    <string name="text1">There are total 10 question each level</string>
+    <string name="text3">The Maximum time of answering 30 Sec</string>
+    <string name="text4">No Negative Evaluation</string>
+    <string name="text5">Passing is allowed if you will got more than 50 Marks</string>
 
 </resources>

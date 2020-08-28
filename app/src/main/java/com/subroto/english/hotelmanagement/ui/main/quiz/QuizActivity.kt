@@ -10,12 +10,13 @@ import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.QuizBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.about_quiz.AboutQuizDialog
 import javax.inject.Inject
 
-class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator{
+class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator {
 
     @Inject
-    lateinit var mQuizViewModel : QuizViewModel
+    lateinit var mQuizViewModel: QuizViewModel
 
     override val bindingVariable: Int
         get() = BR.viewModel
@@ -25,8 +26,7 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator{
         get() = mQuizViewModel
 
 
-    override fun onCreate(savedInstanceState : Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.navigator = this
 
@@ -39,9 +39,12 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator{
             startActivity(intent)
             finish()
         }
-
     }
+
     override fun openQuizRules() {
+
+        val intent = Intent(this, AboutQuizDialog::class.java)
+        startActivity(intent)
     }
 
     override fun openQuizLevel01() {
@@ -56,10 +59,9 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator{
     override fun openQuizLevel04() {
     }
 
-    companion object{
-        fun  newIntent(context: Context) : Intent
-        {
-            return Intent(context,QuizActivity::class.java)
+    companion object {
+        fun newIntent(context: Context): Intent {
+            return Intent(context, QuizActivity::class.java)
         }
     }
 }
