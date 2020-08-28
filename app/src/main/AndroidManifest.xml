@@ -41,6 +41,7 @@
         <activity android:name=".ui.main.quiz.QuizActivity"/>
         <activity android:name=".ui.main.quiz.about_quiz.AboutQuizDialog"
             android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".ui.main.quiz.level01.QuizLevelOneActivity"/>
     </application>
 
 </manifest>

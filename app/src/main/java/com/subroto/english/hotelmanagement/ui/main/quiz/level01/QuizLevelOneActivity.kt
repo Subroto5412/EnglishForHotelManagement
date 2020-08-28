@@ -1,4 +1,4 @@
-package com.subroto.english.hotelmanagement.ui.main.quiz
+package com.subroto.english.hotelmanagement.ui.main.quiz.level01
 
 import android.content.Context
 import android.content.Intent
@@ -8,23 +8,25 @@ import android.widget.TextView
 import com.subroto.english.hotelmanagement.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.QuizBinding
+import com.subroto.english.hotelmanagement.databinding.QuizLevelOneBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
-import com.subroto.english.hotelmanagement.ui.main.quiz.about_quiz.AboutQuizDialog
-import com.subroto.english.hotelmanagement.ui.main.quiz.level01.QuizLevelOneActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.IQuizNavigator
+import com.subroto.english.hotelmanagement.ui.main.quiz.QuizActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.QuizViewModel
 import javax.inject.Inject
 
-class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator {
+class QuizLevelOneActivity  : BaseActivity<QuizLevelOneBinding, QuizLevelOneViewModel>(), IQuizLevelOneNavigator {
 
     @Inject
-    lateinit var mQuizViewModel: QuizViewModel
+    lateinit var mQuizLevelOneViewModel: QuizLevelOneViewModel
 
     override val bindingVariable: Int
         get() = BR.viewModel
     override val layoutId: Int
-        get() = R.layout.quiz
-    override val viewModel: QuizViewModel
-        get() = mQuizViewModel
+        get() = R.layout.quiz_level_one
+    override val viewModel: QuizLevelOneViewModel
+        get() = mQuizLevelOneViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator 
 
         val backBtn = findViewById<Button>(R.id.backbtn) as Button
         val titleName = findViewById<TextView>(R.id.title_name_tv) as TextView
-        titleName.text = "Quiz"
+        titleName.text = "Level 01"
         backBtn.setOnClickListener()
         {
             val intent = Intent(this, HomeActivity::class.java)
@@ -42,30 +44,9 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator 
         }
     }
 
-    override fun openQuizRules() {
-
-        val intent = Intent(this, AboutQuizDialog::class.java)
-        startActivity(intent)
-    }
-
-    override fun openQuizLevel01() {
-
-        val intent = Intent(this, QuizLevelOneActivity::class.java)
-        startActivity(intent)
-    }
-
-    override fun openQuizLevel02() {
-    }
-
-    override fun openQuizLevel03() {
-    }
-
-    override fun openQuizLevel04() {
-    }
-
     companion object {
         fun newIntent(context: Context): Intent {
-            return Intent(context, QuizActivity::class.java)
+            return Intent(context, QuizLevelOneActivity::class.java)
         }
     }
 }
