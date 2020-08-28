@@ -5,4 +5,5 @@ interface IHomeNavigator {
     fun openVocabularyActivity()
     fun openSentenceActivity()
     fun openConversationActivity()
+    fun openQuizActivity()
 }

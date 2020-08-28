@@ -19,6 +19,8 @@ import com.subroto.english.hotelmanagement.ui.main.conversation.service.Conversa
 import com.subroto.english.hotelmanagement.ui.main.conversation.service.ConversationServiceAdapterModule
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import com.subroto.english.hotelmanagement.ui.main.home.HomeActivityModule
+import com.subroto.english.hotelmanagement.ui.main.quiz.QuizActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.QuizActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsActivity
@@ -79,7 +81,8 @@ import dagger.android.ContributesAndroidInjector
         SentenceFoodsActivityModule::class,
         SentenceServiceActivityModule::class,
         SentenceReceptionActivityModule::class,
-        SentenceKitchenActivityModule::class
+        SentenceKitchenActivityModule::class,
+        QuizActivityModule::class
     ]
 )
 
@@ -184,6 +187,11 @@ abstract class ActivityBuilder {
         modules = [SentenceKitchenActivityModule::class, SentenceKitchenAdapterModule::class]
     )
     internal abstract fun bindSentenceKitchenActivity(): SentenceKitchenActivity
+
+    @ContributesAndroidInjector(
+        modules = [QuizActivityModule::class]
+    )
+    internal abstract fun bindQuizActivity(): QuizActivity
 
 
 }

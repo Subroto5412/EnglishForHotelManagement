@@ -38,6 +38,7 @@
         <activity android:name=".ui.main.sentence.reception.SentenceReceptionActivity"/>
         <activity android:name=".ui.main.sentence.service.SentenceServiceActivity"/>
         <activity android:name=".ui.main.sentence.foods.SentenceFoodsActivity"/>
+        <activity android:name=".ui.main.quiz.QuizActivity"/>
     </application>
 
 </manifest>

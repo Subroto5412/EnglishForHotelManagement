@@ -17,4 +17,9 @@ class HomeViewModel  @Inject constructor(dataManager: IDataManager) : BaseViewMo
     fun startConversation() {
         navigator!!.openConversationActivity()
     }
+
+    fun startQuiz()
+    {
+        navigator!!.openQuizActivity()
+    }
 }

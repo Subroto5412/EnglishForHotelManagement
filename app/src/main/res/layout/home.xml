@@ -208,7 +208,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/quiz_play_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
+                    android:layout_height="@dimen/_42sdp"
                     android:layout_marginLeft="@dimen/_22sdp"
                     android:layout_marginTop="@dimen/_14sdp"
                     android:layout_marginRight="@dimen/_22sdp"
@@ -216,7 +216,8 @@
                     android:background="@drawable/play_quiz"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/wish_text" />
+                    app:layout_constraintTop_toBottomOf="@+id/wish_text"
+                    android:onClick="@{() -> viewModel.startQuiz()}"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,6 +8,7 @@ import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.HomeBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.QuizActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
@@ -61,6 +62,12 @@ class HomeActivity  : BaseActivity<HomeBinding, HomeViewModel>(), IHomeNavigator
     }
     override fun openConversationActivity() {
         val intent = Intent(this, ConversationActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    override fun openQuizActivity() {
+        val intent = Intent(this, QuizActivity::class.java)
         startActivity(intent)
         finish()
     }
