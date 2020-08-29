@@ -3,6 +3,7 @@ package com.subroto.english.hotelmanagement.ui.main.sentence
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -48,7 +49,7 @@ class SentenceActivity : BaseActivity<SentenceBinding, SentenceViewModel>(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.navigator = this
-
+        Log.e("---------","--------"+viewModel.dataManager.quizOneValue)
         val backBtn = findViewById<EditText>(R.id.backbtn) as Button
         val titileName = findViewById<EditText>(R.id.title_name_tv) as TextView
         titileName.text = "Sentence"

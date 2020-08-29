@@ -19,4 +19,9 @@ constructor(
         set(email) {
             mPreferencesHelper.email = email
         }
+    override var quizOneValue: String
+        get() = mPreferencesHelper.quizOneValue
+        set(quizOneValue){
+            mPreferencesHelper.quizOneValue = quizOneValue
+        }
 }
