@@ -41,7 +41,7 @@ class QuizLevelOneActivity : BaseActivity<QuizLevelOneBinding, QuizLevelOneViewM
         setUp()
         val backBtn = findViewById<Button>(R.id.backbtn) as Button
         val titleName = findViewById<TextView>(R.id.title_name_tv) as TextView
-        titleName.text = "Level 01"
+        titleName.text = "Quiz Level 01"
         backBtn.setOnClickListener()
         {
             val intent = Intent(this, QuizActivity::class.java)

@@ -24,4 +24,9 @@ constructor(
         set(quizOneValue){
             mPreferencesHelper.quizOneValue = quizOneValue
         }
+    override var quizTwoValue: String
+        get() = mPreferencesHelper.quizTwoValue
+        set(quizTwoValue) {
+            mPreferencesHelper.quizTwoValue = quizTwoValue
+        }
 }

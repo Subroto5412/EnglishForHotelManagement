@@ -5,4 +5,5 @@ interface IPreferencesHelper {
     var user: String
     var email: String
     var quizOneValue: String
+    var quizTwoValue: String
 }
