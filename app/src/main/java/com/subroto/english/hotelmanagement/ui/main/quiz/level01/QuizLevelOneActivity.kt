@@ -4,10 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.core.content.ContextCompat
 import com.subroto.english.hotelmanagement.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.QuizLevelOneBinding
@@ -74,6 +72,8 @@ class QuizLevelOneActivity : BaseActivity<QuizLevelOneBinding, QuizLevelOneViewM
         progressBar.setProgress(i * 10, true)
 
 
+       // val img = findViewById<ImageView>(R.id.question_img) as ImageView
+
 
         if (i < mQuizLevelOneViewModel.getQuizLevelOneListLiveData().value!!.get(totalQuestion - 1).id) {
 
@@ -86,6 +86,8 @@ class QuizLevelOneActivity : BaseActivity<QuizLevelOneBinding, QuizLevelOneViewM
             var correctAns =
                 mQuizLevelOneViewModel.getQuizLevelOneListLiveData().value!!.get(i).correct_answer
             var id = mQuizLevelOneViewModel.getQuizLevelOneListLiveData().value!!.get(i).id
+
+            //img.setImageDrawable(ContextCompat.getDrawable(this, mQuizLevelOneViewModel.getQuizLevelOneListLiveData().value!!.get(i).photo));
 
             ansBtn1.setOnClickListener() {
                 if (correctAns == "1") {

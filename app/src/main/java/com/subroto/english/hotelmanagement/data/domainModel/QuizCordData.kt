@@ -2,7 +2,7 @@ package com.subroto.english.hotelmanagement.data.domainModel
 
 class QuizCordData(
     var id: Int,
-    var photo: String,
+    var photo: Int,
     var question: String,
     var answer1: String,
     var answer2: String,
