@@ -13,6 +13,7 @@ import com.subroto.english.hotelmanagement.ui.main.home.HomeActivity
 import com.subroto.english.hotelmanagement.ui.main.quiz.about_quiz.AboutQuizDialog
 import com.subroto.english.hotelmanagement.ui.main.quiz.level01.QuizLevelOneActivity
 import com.subroto.english.hotelmanagement.ui.main.quiz.level02.QuizLevelTwoActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.level03.QuizLevelThreeActivity
 import javax.inject.Inject
 
 class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator {
@@ -64,6 +65,10 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator 
     }
 
     override fun openQuizLevel03() {
+
+        val intent = Intent(this, QuizLevelThreeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     override fun openQuizLevel04() {

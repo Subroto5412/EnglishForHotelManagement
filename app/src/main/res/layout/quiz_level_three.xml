@@ -140,7 +140,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ans_img1"
                 android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_75sdp"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:background="@drawable/quiz_question_rounded_corner"
@@ -151,7 +151,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ans_img2"
                 android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_75sdp"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:layout_marginRight="@dimen/_25sdp"
@@ -164,7 +164,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ans_img3"
                 android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_75sdp"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:layout_marginBottom="@dimen/_25sdp"
@@ -177,7 +177,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ans_img4"
                 android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_75sdp"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:layout_marginRight="@dimen/_25sdp"

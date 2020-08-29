@@ -19,6 +19,9 @@ constructor(context: Context, @PreferenceInfo prefFileName: String) : IPreferenc
     override var quizTwoValue: String
         get() = mPrefs.getString(PREF_KEY_QUIZTWO,"").toString()
         set(quizTwoValue) = mPrefs.edit().putString(PREF_KEY_QUIZTWO, quizTwoValue).apply()
+    override var quizThreeValue: String
+        get() = mPrefs.getString(PREF_KEY_QUIZTHREE,"").toString()
+        set(quizThreeValue) = mPrefs.edit().putString(PREF_KEY_QUIZTHREE, quizThreeValue).apply()
 
     private val mPrefs: SharedPreferences =
         context.getSharedPreferences(prefFileName, Context.MODE_PRIVATE)
@@ -28,5 +31,6 @@ constructor(context: Context, @PreferenceInfo prefFileName: String) : IPreferenc
         private val PREF_KEY_EMAIL = "PREF_KEY_EMAIL"
         private val PREF_KEY_QUIZONE = "PREF_KEY_QUIZONE"
         private val PREF_KEY_QUIZTWO = "PREF_KEY_QUIZTWO"
+        private val PREF_KEY_QUIZTHREE = "PREF_KEY_QUIZTHREE"
     }
 }

@@ -6,4 +6,5 @@ interface IPreferencesHelper {
     var email: String
     var quizOneValue: String
     var quizTwoValue: String
+    var quizThreeValue: String
 }
