@@ -44,6 +44,7 @@
         <activity android:name=".ui.main.quiz.level01.QuizLevelOneActivity"/>
         <activity android:name=".ui.main.quiz.level02.QuizLevelTwoActivity"/>
         <activity android:name=".ui.main.quiz.level03.QuizLevelThreeActivity"/>
+       <!-- <activity android:name=".ui.main.quiz.quiz_progress.ProgressActivity"/>-->
     </application>
 
 </manifest>

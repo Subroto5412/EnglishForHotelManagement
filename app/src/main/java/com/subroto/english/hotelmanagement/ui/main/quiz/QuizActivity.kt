@@ -72,6 +72,10 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator 
     }
 
     override fun openQuizLevel04() {
+
+//        val intent = Intent(this, ProgressActivity::class.java)
+//        startActivity(intent)
+//        finish()
     }
 
     companion object {

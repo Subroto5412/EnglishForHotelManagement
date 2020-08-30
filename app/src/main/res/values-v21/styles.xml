@@ -4,4 +4,16 @@
         <item name="android:progressBackgroundTint">#81C8FE</item>
         <item name="android:progressTint">#006BBC</item>
     </style>
+    <style name="VocabularyProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressBackgroundTint">#E1E1E1</item>
+        <item name="android:progressTint">#FF9D45</item>
+    </style>
+    <style name="SentenceProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressBackgroundTint">#E1E1E1</item>
+        <item name="android:progressTint">#10D635</item>
+    </style>
+    <style name="ConversationProgressBar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressBackgroundTint">#E1E1E1</item>
+        <item name="android:progressTint">#FF2B72</item>
+    </style>
 </resources>

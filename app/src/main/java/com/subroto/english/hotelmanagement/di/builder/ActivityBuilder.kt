@@ -95,6 +95,7 @@ import dagger.android.ContributesAndroidInjector
         QuizLevelOneActivityModule::class,
         QuizLevelTwoActivityModule::class,
         QuizLevelThreeActivityModule::class
+       // ProgressActivityModule::class
     ]
 )
 
@@ -224,4 +225,9 @@ abstract class ActivityBuilder {
         modules = [QuizLevelThreeActivityModule::class]
     )
     internal abstract fun bindQuizLevelThree(): QuizLevelThreeActivity
+
+    /*@ContributesAndroidInjector(
+        modules = [ProgressActivityModule::class]
+    )
+    internal abstract fun bindProgress(): ProgressActivity*/
 }
