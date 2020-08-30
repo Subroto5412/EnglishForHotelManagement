@@ -88,6 +88,7 @@ class QuizLevelTwoActivity : BaseActivity<QuizLevelTwoBinding, QuizLevelTwoViewM
             ansBtn1.setOnClickListener() {
                 if (correctAns == "1") {
                     Toast.makeText(this, "Answer is Correct", Toast.LENGTH_LONG).show()
+                    mQuizLevelTwoViewModel.dataManager.quizTwoValue = id.toString()
                 } else {
                     Toast.makeText(this, "Answer is not Correct", Toast.LENGTH_LONG).show()
                 }
@@ -98,6 +99,7 @@ class QuizLevelTwoActivity : BaseActivity<QuizLevelTwoBinding, QuizLevelTwoViewM
             ansBtn2.setOnClickListener() {
                 if (correctAns == "2") {
                     Toast.makeText(this, "Answer is Correct", Toast.LENGTH_LONG).show()
+                    mQuizLevelTwoViewModel.dataManager.quizTwoValue = id.toString()
                 } else {
                     Toast.makeText(this, "Answer is not Correct", Toast.LENGTH_LONG).show()
                 }
@@ -108,6 +110,7 @@ class QuizLevelTwoActivity : BaseActivity<QuizLevelTwoBinding, QuizLevelTwoViewM
             ansBtn3.setOnClickListener() {
                 if (correctAns == "3") {
                     Toast.makeText(this, "Answer is Correct", Toast.LENGTH_LONG).show()
+                    mQuizLevelTwoViewModel.dataManager.quizTwoValue = id.toString()
                 } else {
                     Toast.makeText(this, "Answer is not Correct", Toast.LENGTH_LONG).show()
                 }
@@ -117,13 +120,14 @@ class QuizLevelTwoActivity : BaseActivity<QuizLevelTwoBinding, QuizLevelTwoViewM
             ansBtn4.setOnClickListener() {
                 if (correctAns == "4") {
                     Toast.makeText(this, "Answer is Correct", Toast.LENGTH_LONG).show()
+                    mQuizLevelTwoViewModel.dataManager.quizTwoValue = id.toString()
                 } else {
                     Toast.makeText(this, "Answer is not Correct", Toast.LENGTH_LONG).show()
                 }
                 i = i + 1
                 setUp()
             }
-            mQuizLevelTwoViewModel.dataManager.quizTwoValue = id.toString()
+
         } else {
             ansBtn1.isEnabled = false
             ansBtn2.isEnabled = false

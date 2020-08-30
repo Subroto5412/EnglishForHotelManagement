@@ -3,14 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-   <!-- <data>
-
-        <import type="android.view.View" />
-
+    <data>
         <variable
             name="viewModel"
-            type="com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressViewModel" />
-    </data>-->
+            type="com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressResultViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

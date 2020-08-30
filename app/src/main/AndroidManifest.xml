@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.subroto.english.hotelmanagement">
 
     <application
@@ -44,7 +45,8 @@
         <activity android:name=".ui.main.quiz.level01.QuizLevelOneActivity"/>
         <activity android:name=".ui.main.quiz.level02.QuizLevelTwoActivity"/>
         <activity android:name=".ui.main.quiz.level03.QuizLevelThreeActivity"/>
-       <!-- <activity android:name=".ui.main.quiz.quiz_progress.ProgressActivity"/>-->
+        <activity android:name=".ui.main.quiz.quiz_progress.ProgressResultActivity"/>
+
     </application>
 
 </manifest>

@@ -216,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_20sdp"
-                    android:text="Level 04"
+                    android:text="Progress Result"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/_20ssp"
                     android:textStyle="normal"

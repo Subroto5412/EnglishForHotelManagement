@@ -9,6 +9,7 @@ import com.subroto.english.hotelmanagement.databinding.HomeBinding
 import com.subroto.english.hotelmanagement.ui.base.BaseActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
 import com.subroto.english.hotelmanagement.ui.main.quiz.QuizActivity
+import com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressResultActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.VocabularyActivity
 import com.subroto.english.hotelmanagement.ui.main.vocabulary.geeting.GeetingActivity
@@ -71,4 +72,8 @@ class HomeActivity  : BaseActivity<HomeBinding, HomeViewModel>(), IHomeNavigator
         startActivity(intent)
         finish()
     }
-}
+    override fun openProgressActivity() {
+        val intent = Intent(this, ProgressResultActivity::class.java)
+        startActivity(intent)
+        finish()
+    }}

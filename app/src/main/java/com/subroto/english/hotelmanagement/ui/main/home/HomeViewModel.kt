@@ -22,4 +22,9 @@ class HomeViewModel  @Inject constructor(dataManager: IDataManager) : BaseViewMo
     {
         navigator!!.openQuizActivity()
     }
+
+    fun startProgress()
+    {
+        navigator!!.openProgressActivity()
+    }
 }

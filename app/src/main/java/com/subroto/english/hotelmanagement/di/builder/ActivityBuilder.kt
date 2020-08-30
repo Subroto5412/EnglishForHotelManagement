@@ -1,5 +1,6 @@
 package com.subroto.english.hotelmanagement.di.builder
 
+import com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressResultActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivity
 import com.subroto.english.hotelmanagement.ui.main.conversation.ConversationActivityModule
 import com.subroto.english.hotelmanagement.ui.main.conversation.foods.ConversationFoodsActivity
@@ -29,6 +30,7 @@ import com.subroto.english.hotelmanagement.ui.main.quiz.level02.QuizLevelTwoActi
 import com.subroto.english.hotelmanagement.ui.main.quiz.level02.QuizLevelTwoActivityModule
 import com.subroto.english.hotelmanagement.ui.main.quiz.level03.QuizLevelThreeActivity
 import com.subroto.english.hotelmanagement.ui.main.quiz.level03.QuizLevelThreeActivityModule
+import com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressResultActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivity
 import com.subroto.english.hotelmanagement.ui.main.sentence.SentenceActivityModule
 import com.subroto.english.hotelmanagement.ui.main.sentence.foods.SentenceFoodsActivity
@@ -94,8 +96,8 @@ import dagger.android.ContributesAndroidInjector
         AboutQuizDialogModule::class,
         QuizLevelOneActivityModule::class,
         QuizLevelTwoActivityModule::class,
-        QuizLevelThreeActivityModule::class
-       // ProgressActivityModule::class
+        QuizLevelThreeActivityModule::class,
+       ProgressResultActivityModule::class
     ]
 )
 
@@ -226,8 +228,8 @@ abstract class ActivityBuilder {
     )
     internal abstract fun bindQuizLevelThree(): QuizLevelThreeActivity
 
-    /*@ContributesAndroidInjector(
-        modules = [ProgressActivityModule::class]
+    @ContributesAndroidInjector(
+        modules = [ProgressResultActivityModule::class]
     )
-    internal abstract fun bindProgress(): ProgressActivity*/
+    internal abstract fun bindProgressResult(): ProgressResultActivity
 }

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.subroto.english.hotelmanagement.ui.main.quiz.quiz_progress.ProgressResultActivity
 import com.subroto.english.hotelmanagement.BR
 import com.subroto.english.hotelmanagement.R
 import com.subroto.english.hotelmanagement.databinding.QuizBinding
@@ -73,9 +74,9 @@ class QuizActivity : BaseActivity<QuizBinding, QuizViewModel>(), IQuizNavigator 
 
     override fun openQuizLevel04() {
 
-//        val intent = Intent(this, ProgressActivity::class.java)
-//        startActivity(intent)
-//        finish()
+        val intent = Intent(this, ProgressResultActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     companion object {
